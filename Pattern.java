@@ -1,4 +1,10 @@
+// Renee Rosenheim
+// 11/13/25
+// This program creates different patterns based on an input value
 public class Pattern{
+// An integer must be input
+// Integer must be greater than zero
+// A triangle of stars will be printed
 public static void stars(int rows){
     int i = 0;
     String star = "*";
@@ -8,12 +14,14 @@ public static void stars(int rows){
         i++;
 }
 }
-
+// An integer must be input
+// Integer must be greater than zero
+// A triangle of numbers one through the input integer will be printed
 public static void triangle(int rows){
         int i = 0;
     while (i < rows){
         int j = 0;
-        while (j < i){
+        while (j <= i){
         System.out.print(i + 1);
         j++;    
     }
@@ -21,7 +29,9 @@ public static void triangle(int rows){
         i++;
 }
 }
-
+// An integer must be input
+// Integer must be greater than zero
+// A triangle of the odd numbers from the input integer through one will be printed
 public static void odds(int start){
             int i = start;
         while (i - 1 < start && i > 0){
@@ -38,8 +48,9 @@ public static void odds(int start){
         i--;
 }
 }
-
-
+// An integer must be input
+// Integer must be greater than zero
+// A triangle that switches between E and O each line will be printer
 public static void eo(int maxE){
         int i = 1;
    String letter = "E";
@@ -51,7 +62,6 @@ public static void eo(int maxE){
             System.out.print(letter);
         }
         System.out.println();
-        //swap the letter to the other letter
         if(letter == "O"){
             letter = "E";
         }
@@ -66,7 +76,6 @@ i = maxE - 1;
             System.out.print(letter);
         }
         System.out.println();
-        //swap the letter to the other letter
         if(letter == "O"){
             letter = "E";
         }
@@ -76,20 +85,17 @@ i = maxE - 1;
         i--;
     }
     }
-
-//Uses  loops of your choice to print out the following pattern (shown here with maxE equal to 6):
-
-
-//Please note that if given an odd input you’ll need to start the first row with an “E” instead of an “O”, for example maxE = 5
-
-
-
-//Create a method with the signature:
+// An integer must be input
+// Integer must be greater than zero
+// A centered triangle from one through the input integer will be printer
 public static void pyramid(int rows){
                 int i = rows;
                 int num = 1;
+                String space = "";
         while (i - 1 < rows && i > 0){
         int j = 0;
+        System.out.print(space);
+        space = space + " ";
         System.out.print(num);
         while (j < i-1){
             System.out.print(num);
@@ -101,13 +107,12 @@ public static void pyramid(int rows){
         i--;
 }
 }
-
-//Using loops of your choice print the pattern below (shown here with five rows):
-
 public static void main(String[]args){
-    pyramid(6);
+    stars(7);
+    triangle(9);
+    odds(9);
+    eo(5);
+    eo(6);
+    pyramid(5);
 }
-
-
 }
-
